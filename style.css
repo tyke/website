@@ -17,6 +17,9 @@ html {
 #footer {
     position: fixed;
     bottom: 2px;
+    left: 50%;
+    width: 144px;
+    margin-left: -72px;
 }
 .icon {
     display: block;
