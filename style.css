@@ -32,6 +32,15 @@ html {
 }
 
 
+@media all and (max-width : 650px) {
+    #header {
+        font-size: 55px;
+    }
+    #about {
+        font-size: 30px
+    }
+}
+
 @media all and (max-width : 320px) {
     #header {
         font-size: 30px;
