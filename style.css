@@ -1,0 +1,29 @@
+html {
+    text-align: center;
+    background: #252629;
+    color: #c7c7c7;
+}
+#header {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 75px;
+    padding-top: 100px;
+}
+#about {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+#footer {
+    position: fixed;
+    bottom: 2px;
+}
+.icon {
+    display: block;
+    float: left;
+    margin-right: 6px;
+}
+.icon img {
+    width: 30px;
+    height: 30px;
+}
