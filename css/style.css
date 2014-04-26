@@ -18,17 +18,15 @@ html {
     position: fixed;
     bottom: 2px;
     left: 50%;
-    width: 144px;
+    width: 148px;
     margin-left: -72px;
 }
 .icon {
     display: block;
     float: left;
-    margin-right: 6px;
-}
-.icon img {
-    width: 30px;
-    height: 30px;
+    margin-right: 10px;
+    color: #c7c7c7;
+    font-size: 30px;
 }
 
 
