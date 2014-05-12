@@ -3,16 +3,20 @@ html {
     background: #252629;
     color: #c7c7c7;
 }
-#header {
+h1 {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 75px;
+    margin: 0;
+    padding: 0;
     padding-top: 100px;
 }
-#about {
+h2 {
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 300;
     font-size: 35px;
+    margin: 0;
+    padding: 0;
 }
 #footer {
     position: fixed;
