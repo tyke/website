@@ -2,7 +2,7 @@ html {
     text-align: center;
     background: #252629;
     color: #fafafa;
-    background: url("/images/background1.jpg") no-repeat center center fixed; 
+    background: url("http://res.cloudinary.com/dzepwcs5f/image/upload/v1485558471/photo-1446104838475-bc6508184f08-min_1_slvurf.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -18,59 +18,117 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    color: #fafafa;
+    color: rgba(255, 255, 255, 0.75);
 }
 #container {
     height: inherit;
     border: 1px solid rgba(236, 232, 232, 0.25);
 }
-#header {
-    margin-top: 190px;
-    padding: 30px 0;
+
+#about {
+    margin: 0 auto 0;
+    width: 280px;
+    position: relative;
+    top: 50%;
+    margin-top: -100px;
 }
+
 h1 {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Fira Sans Condensed', sans-serif;
     font-weight: 400;
-    font-size: 95px;
+    font-size: 50px;
     margin: 0;
     padding: 0;
-    color: #fafafa;
+    color: rgba(255, 255, 255, 0.75);
     text-shadow: 1px 1px 1px #25302f;
+    animation: slide-down .6s ease;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    position: relative;
+    top: -10px;
+    margin-bottom: 5px;
 }
-#footer {
-    position: fixed;
-    bottom: 12px;
+
+@keyframes slide-out {
+    from { left: 50%; right: 50%; }
+    to { left: 0; right: 0 }
+}
+
+@keyframes slide-down {
+    from { top: -10px; }
+    to { top: 0; }
+}
+@keyframes slide-up {
+    from { top: 10px; }
+    to { top: 0; }
+}
+
+.divider {
+    height: 8px;
+    position: relative;
+}
+.divider:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
     left: 50%;
-    width: 138px;
-    margin-left: -69px;
+    right: 50%;
+    top: 0px;
+    background: rgba(236, 232, 232, 0.25);
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    animation: slide-out .4s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
+}
+
+.icons {
+    animation: slide-up .6s ease;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    position: relative;
+    top: 10px;
 }
 .icon {
-    display: block;
-    float: left;
+    display: inline-block;
     margin-right: 10px;
-    color: #fafafa;
+    color: rgba(255, 255, 255, 0.75);
     text-shadow: 1px 1px 1px #25302f;
     font-size: 30px;
+    transition: color 0.5s ease;
 }
-#footer .icon:last-child {
-    margin-right: 0px;
+.icon:hover {
+    color: rgba(255, 255, 255, 0.9);
 }
 
+#footer {
+    width: 100%;
+    background: url("../images/camo.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+}
 
 @media all and (max-width : 650px) {
-    #header {
-        margin-top: 140px;
+    #about {
+        width: 230px;
     }
     h1 {
-        font-size: 75px;
+        font-size: 45px;
     }
 }
 
-@media all and (max-width : 320px) {
+@media all and (max-width : 375px) {
     body {
         padding: 7px;
-    }
-    h1 {
-        font-size: 70px;
     }
 }
