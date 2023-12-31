@@ -1,0 +1,142 @@
+<html>
+	<title>Key Chooser</title>
+	<script>
+		var totalTime = 12000
+		var keys = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
+		var currKey
+		var intv
+		var hasStarted = false
+		var newKey
+
+		function start () {
+			document.getElementById('buttonToggle').classList.remove('buttonGreen')
+			document.getElementById('buttonToggle').innerHTML = 'Stop'
+			document.getElementById('buttonToggle').classList.add('buttonRed')
+			document.getElementById('progressFill').style.transitionDuration = totalTime/1000 + 's'
+			document.getElementById('duration').value = totalTime
+			changeKey()
+		}
+
+		function changeKey () {
+			do {
+				newKey = getKey()
+			} while (currKey == newKey)
+
+			currKey = newKey
+			setNewKey(currKey)
+		}
+		function reset () {
+			document.getElementById('progressFill').classList.remove('progressFull')
+			document.getElementById('progressFill').classList.add('progressReset')
+			document.getElementById('progressFill').style.width = '0px'
+			document.getElementById('progressFill').style.transitionDuration = totalTime/1000 + 's'
+		}
+		function setNewKey (currKey) {
+			reset()
+
+			if (!intv) {
+				intv = setInterval(changeKey, totalTime)
+			}
+			setTimeout(function () {
+				hasStarted = true
+
+				currKey = newKey
+				document.getElementById('theKey').innerHTML = currKey
+				document.getElementById('progressFill').classList.remove('progressReset')
+				document.getElementById('progressFill').classList.add('progressFull')
+			}, 25)
+		}
+		function getKey () {
+			return keys[Math.floor(Math.random() * keys.length)]
+		}
+		function startStop () {
+			if (!hasStarted) return start()
+
+			hasStarted = false;
+			intv = clearInterval(intv)
+			document.getElementById('buttonToggle').classList.remove('buttonRed')
+			document.getElementById('buttonToggle').innerHTML = 'Start'
+			document.getElementById('buttonToggle').classList.add('buttonGreen')
+			reset()
+		}
+		function setDuration (e) {
+			totalTime = +e.value
+			intv = clearInterval(intv)
+			reset()
+			setNewKey(currKey)
+		}
+	</script>
+	<style>
+		html, body { margin:0; padding: 0; background: #3a3a3a; display: flex; align-items: center; justify-content: center; font-family: "Gill Sans", sans-serif;}
+		#theKey { font-size: 440pt; text-align: center; color: #ddd; }
+		#progressBar { position: absolute; top: 0; width: 100%; height: 6px; background: transparent; }
+		.progressReset {
+			transition: width 0s !important;
+			width: 0px !important;
+		}
+		.progressFull {
+			width: 100% !important;
+		}
+		#progressFill {
+			height: 100%;
+			width: 1px;
+			background: #5583bd;
+			transition: width 3s linear;
+		}
+		#buttonToggle {
+			cursor: pointer;
+			border-radius: 3px;
+			padding: 10px 50px;
+			text-transform: uppercase;
+			display: inline-block;
+		}
+		.buttonRed {
+			background: #D2222D;
+			color: black;
+		}
+		.buttonGreen {
+			background: #007000;
+			color: white;
+		}	
+		#controls {
+			position: absolute;
+			bottom: 20px;
+			width: 100%;
+			text-align: center;
+		}
+		.tl-input {
+			display: inline-block;
+			position: relative;
+			top: 5px;
+			right: 20px;
+		}
+		.tl-input h4 {
+			margin: 0;
+			padding: 0 0 4px;
+			font-weight: normal;
+			color: #ddd;
+		}
+		.tl-input input {
+			width: 70px;
+			background: #ddd;
+			border-radius: 3px;
+			border: 0;
+		}
+		.break {
+			flex-basis: 100%;
+			height: 0;
+		}
+	</style>
+	<body onLoad="start()">
+		<div id="progressBar"><div id="progressFill"></div></div>
+		<div id="theKey"></div>
+		<div class="break"></div>
+		<div id="controls">
+			<div class="tl-input">
+				<h4>Duration</h4>
+				<input id="duration" onkeyup="setDuration(this)"/>
+			</div>
+			<div id="buttonToggle" class="buttonRed" onClick="startStop()">Stop</div>
+		</div>
+	</body>
+</html>
