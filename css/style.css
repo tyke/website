@@ -1,163 +1,134 @@
-/* ---------------------------------------------------------------------------
-   tykelewis.com
-   Palette: warm paper, ink, a single terracotta accent.
-   Structure: alternating bands, hairline rules, no boxes.
---------------------------------------------------------------------------- */
-
-:root{
-  --ink:#221f1c;
-  --muted:#5b564f;
-  --faint:#918b82;
-  --paper:#f6f1e9;
-  --white:#fffdfa;
-  --rule:#e3dbcd;
-  --accent:#a3552e;
-  --accent-soft:rgba(163,85,46,.32);
+html {
+    text-align: center;
+    background: #252629;
+    color: #fafafa;
+    background: url("http://res.cloudinary.com/dzepwcs5f/image/upload/v1485558471/photo-1446104838475-bc6508184f08-min_1_slvurf.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.75);
+}
+#container {
+    height: inherit;
+    border: 1px solid rgba(236, 232, 232, 0.25);
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-img{display:block}
-
-body{
-  background:var(--white);
-  color:var(--ink);
-  font:400 16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+#about {
+    margin: 0 auto 0;
+    width: 280px;
+    position: relative;
+    top: 50%;
+    margin-top: -100px;
 }
 
-.serif{
-  font-family:"Source Serif 4","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-  font-weight:400;
+h1 {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 1px 1px 1px #25302f;
+    animation: slide-down .6s ease;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    position: relative;
+    top: -10px;
+    margin-bottom: 5px;
 }
 
-.wrap{max-width:1040px;margin:0 auto;padding:0 40px}
-.band{background:var(--paper)}
-
-a{color:inherit}
-
-/* Company marks. Each source PNG carries a different amount of internal
-   padding, so the frame heights are tuned to match optical sizes. Saturation
-   is knocked back so the terracotta stays the only saturated colour. */
-.mk{display:flex;align-items:center;gap:10px}
-.mk img,.zy img,.workhead img{width:auto;filter:saturate(.7)}
-.lg-slack{height:30px}
-.lg-nw{height:41px}
-.lg-vanna{height:42px}
-
-/* Zynga's logo file includes a wordmark rotated 90deg, so it is cropped to
-   the dog and the company name is set in type alongside it. */
-.zy{position:relative;width:26px;height:34px;overflow:hidden;flex:none}
-.zy img{position:absolute;left:-5px;top:-8px;width:47px;max-width:none;height:auto}
-
-/* --- hero ---------------------------------------------------------------- */
-.hero .wrap{
-  display:grid;grid-template-columns:1.25fr .8fr;gap:64px;align-items:center;
-  padding-top:72px;padding-bottom:76px;
-}
-.ident{margin-bottom:26px}
-.ident .nm{font-size:19px;letter-spacing:-.01em}
-.ident .ttl{font-size:14.5px;color:var(--muted);margin-top:2px}
-
-h1{font-size:45px;line-height:1.15;letter-spacing:-.016em;margin-bottom:22px;font-weight:400}
-h1 em{font-style:italic;color:var(--accent)}
-.sub{font-size:18px;color:var(--muted);max-width:44ch;line-height:1.6}
-
-.heromail{margin-top:32px;font-size:22px}
-.heromail a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:3px}
-.heromail a:hover{color:var(--accent)}
-
-/* warm grade so the foliage sits with the paper rather than fighting it */
-.photo{
-  width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:16px;
-  filter:saturate(.82) sepia(.14) contrast(1.03) brightness(1.02);
+@keyframes slide-out {
+    from { left: 50%; right: 50%; }
+    to { left: 0; right: 0 }
 }
 
-/* --- logo band ----------------------------------------------------------- */
-.logoband{border-top:1px solid var(--rule)}
-.logoband .wrap{
-  display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px 30px;
-  padding-top:30px;padding-bottom:30px;
+@keyframes slide-down {
+    from { top: -10px; }
+    to { top: 0; }
 }
-.mk .nm{font-size:17px;color:#2f2b27}
-.mk .rl{
-  display:block;font-size:11px;letter-spacing:.07em;text-transform:uppercase;
-  color:var(--faint);margin-top:2px;
+@keyframes slide-up {
+    from { top: 10px; }
+    to { top: 0; }
 }
 
-/* --- sections ------------------------------------------------------------ */
-section{padding:82px 0}
-h2{font-size:33px;letter-spacing:-.018em;font-weight:400}
-
-.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:30px}
-.about p{font-size:18px;line-height:1.72;color:#33302b}
-.about p + p{margin-top:18px}
-
-/* --- ways I can help ----------------------------------------------------- */
-.groupname{font-size:24px;letter-spacing:-.012em;margin:48px 0 4px}
-.groupname:first-of-type{margin-top:38px}
-.groupnote{color:var(--muted);font-size:15.5px;margin-bottom:14px}
-
-.grid{
-  display:grid;grid-template-columns:1fr 1fr;column-gap:56px;row-gap:0;
-  border-bottom:1px solid var(--rule);
+.divider {
+    height: 8px;
+    position: relative;
 }
-.item{padding:22px 0 26px;border-top:1px solid var(--rule)}
-.item h3{font-size:19px;letter-spacing:-.01em;margin-bottom:7px;font-weight:400}
-.item p{font-size:15.5px;color:var(--muted);line-height:1.55}
-
-.good{
-  display:block;margin-top:13px;padding-left:14px;
-  border-left:2px solid var(--accent-soft);
-  font-size:14px;color:var(--accent);font-style:italic;line-height:1.5;
+.divider:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    top: 0px;
+    background: rgba(236, 232, 232, 0.25);
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    animation: slide-out .4s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
 }
-.closer{margin-top:30px;font-size:15.5px;color:var(--muted);font-style:italic}
 
-/* --- selected work ------------------------------------------------------- */
-.work{
-  display:grid;grid-template-columns:280px 1fr;gap:40px;
-  padding:26px 0;border-top:1px solid var(--rule);
+.icons {
+    animation: slide-up .6s ease;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    position: relative;
+    top: 10px;
 }
-.work:first-of-type{margin-top:30px}
-.workhead{display:flex;align-items:center;gap:12px}
-.work .co{font-size:20px;line-height:1.2}
-.work .role{
-  font-size:12.5px;color:var(--faint);letter-spacing:.05em;
-  text-transform:uppercase;margin-top:3px;
+.icon {
+    display: inline-block;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 1px 1px 1px #25302f;
+    font-size: 30px;
+    transition: color 0.5s ease;
 }
-.work p{font-size:16.5px;color:var(--muted);line-height:1.62}
+.icon:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
 
-/* --- contact ------------------------------------------------------------- */
-.contact{text-align:center}
-.contact p.lead{font-size:17px;color:var(--muted);max-width:58ch;margin:16px auto 34px}
-.bigmail{font-size:30px}
-.bigmail a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:3px}
-.bigmail a:hover{color:var(--accent)}
-.links{margin-top:22px;font-size:15px;color:var(--faint)}
-.links a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule)}
-.links a:hover{color:var(--accent)}
+#footer {
+    width: 100%;
+    background: url("../images/camo.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+}
 
-/* --- mobile -------------------------------------------------------------- */
-@media (max-width:860px){
-  .wrap{padding:0 22px}
+@media all and (max-width : 650px) {
+    #about {
+        width: 230px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+}
 
-  .hero .wrap{grid-template-columns:1fr;gap:30px;padding-top:44px;padding-bottom:44px}
-  .photo{width:130px;order:-1;border-radius:12px}
-  .ident{margin-bottom:20px}
-  h1{font-size:33px}
-  .sub{font-size:17px}
-  .heromail{font-size:19px}
-
-  section{padding:54px 0}
-  h2{font-size:26px}
-
-  .about,.work{grid-template-columns:1fr;gap:14px}
-  .about{gap:18px;margin-top:22px}
-  .about p{font-size:17px}
-  .grid{grid-template-columns:1fr}
-  .work{gap:10px}
-
-  .logoband .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
-
-  .bigmail{font-size:24px}
+@media all and (max-width : 375px) {
+    body {
+        padding: 7px;
+    }
 }
