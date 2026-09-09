@@ -44,6 +44,10 @@ a{color:inherit}
 .lg-slack{height:30px}
 .lg-nw{height:41px}
 .lg-vanna{height:42px}
+/* Two Chairs ships as a full-bleed tile rather than a free-standing mark, so it
+   is rounded slightly and set a touch smaller: a solid block of colour reads
+   heavier than the open marks at the same height. */
+.lg-tc{height:30px;border-radius:6px}
 
 /* Zynga's logo file includes a wordmark rotated 90deg, so it is cropped to
    the dog and the company name is set in type alongside it. */
@@ -112,6 +116,8 @@ h2{font-size:33px;letter-spacing:-.018em;font-weight:400}
   font-size:14px;color:var(--accent);font-style:italic;line-height:1.5;
 }
 .closer{margin-top:30px;font-size:15.5px;color:var(--muted);font-style:italic}
+.closer a{text-decoration:none;border-bottom:1px solid var(--rule)}
+.closer a:hover{color:var(--accent)}
 
 /* --- selected work ------------------------------------------------------- */
 .work{
