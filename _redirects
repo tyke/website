@@ -1,0 +1,6 @@
+# Netlify redirects.
+#
+# /work.html was the consulting page before it was promoted to the site root.
+# A real 301 passes ranking signals properly; the work.html stub left in the
+# repo is only a fallback in case this file ever stops being picked up.
+/work.html    /    301!
