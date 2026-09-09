@@ -1,34 +1,275 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>tyke.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scrollable=0">
-    <meta name="author" content="Tyke Lewis">
-    <meta name="description" content="Tyke Lewis is a web developer based in San Francisco"/>
-    <meta property="og:description" content="Tyke Lewis is a web developer based in San Francisco">
-    <meta property="og:site_name" content="Tyke Lewis">
-    <meta property="og:title" content="Tyke Lewis">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://tykelewis.com/">
-    <meta name="google-site-verification" content="XVaU6vf_BVgpM33N1qWs_KEbKGQ9GhzT1lv4qg_9TLE" />
-    
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed" rel="stylesheet">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/retina.js/1.0.1/retina.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tyke Lewis · Fractional technical builder and leader</title>
+
+<meta name="author" content="Tyke Lewis">
+<!-- The h1 keeps the differentiated positioning; the description carries the
+     terms people actually search, so the page is findable without flattening
+     how it reads. -->
+<meta name="description" content="Fractional CTO and VP of Engineering who still builds. Almost twenty years leading product and engineering teams at Slack, NerdWallet, Zynga, and Vanna Health.">
+<link rel="canonical" href="https://tykelewis.com/">
+
+<!-- Carried over from the previous homepage. Removing this un-verifies the
+     domain in Google Search Console. -->
+<meta name="google-site-verification" content="XVaU6vf_BVgpM33N1qWs_KEbKGQ9GhzT1lv4qg_9TLE">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tyke Lewis">
+<meta property="og:title" content="Tyke Lewis · Fractional technical builder and leader">
+<meta property="og:description" content="I help founders build products, and the teams that build them. Almost twenty years of engineering leadership at Slack, NerdWallet, Zynga, and Vanna Health.">
+<meta property="og:url" content="https://tykelewis.com/">
+<meta property="og:image" content="https://tykelewis.com/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fractional engineering leadership. Builder first. Tyke Lewis — almost twenty years at Slack, NerdWallet, Zynga, and Vanna Health.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+<meta name="theme-color" content="#f6f1e9">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap">
+<link rel="stylesheet" href="./css/work.css">
+
+<!-- Structured data. The service catalogue mirrors the "Ways I can help"
+     section verbatim: Google penalises markup that describes things the page
+     does not actually show. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://tykelewis.com/#tyke",
+      "name": "Tyke Lewis",
+      "url": "https://tykelewis.com/",
+      "image": "https://tykelewis.com/images/tyke.jpg",
+      "jobTitle": "Fractional technical builder and leader",
+      "description": "Fractional and advisory engineering leader who still builds. Almost twenty years building products and engineering teams, most recently as VP of Engineering at Vanna Health and Director of Engineering at Slack.",
+      "sameAs": [
+        "https://linkedin.com/in/tykelewis",
+        "https://github.com/tyke"
+      ],
+      "knowsAbout": [
+        "Fractional CTO",
+        "Fractional VP of Engineering",
+        "Engineering hiring",
+        "Engineering org design",
+        "Engineering management coaching",
+        "Technical due diligence",
+        "AI development tools"
+      ],
+      "alumniOf": [
+        { "@type": "Organization", "name": "Slack" },
+        { "@type": "Organization", "name": "Vanna Health" },
+        { "@type": "Organization", "name": "NerdWallet" },
+        { "@type": "Organization", "name": "Zynga" },
+        { "@type": "Organization", "name": "Two Chairs" }
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://tykelewis.com/#practice",
+      "name": "Tyke Lewis · Fractional engineering leadership",
+      "url": "https://tykelewis.com/",
+      "image": "https://tykelewis.com/images/tyke.jpg",
+      "provider": { "@id": "https://tykelewis.com/#tyke" },
+      "serviceType": [
+        "Fractional CTO",
+        "Fractional VP of Engineering",
+        "Technical advisory",
+        "Engineering leadership coaching"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Ways I can help",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hiring", "description": "Sourcing, evaluating, and closing engineers." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sounding board", "description": "A standing conversation about the hard calls: what to build, who to hire, when to rewrite." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Org design and management coaching", "description": "Team structure, leveling, and growing first-time managers into good ones." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engineering health check", "description": "A short, honest read on what is actually slowing your team down, and what to do about it." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Own an initiative", "description": "Take a major product or technical project end to end, alongside your engineers." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Build something new", "description": "Zero to one apps and features, shipped." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Raise the ceiling with AI tooling", "description": "Get your team genuinely fast with modern AI development tools." } }
+        ]
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
-    <div id="container">
-        <div id="about">
-            <h1>Tyke Lewis</h1>
-            <div class="divider"></div>
-            <div class="icons">
-                <a href="https://facebook.com/tykelewis" target="_blank" class="icon"><i class="fa fa-facebook-square"></i></a>
-                <a href="https://www.linkedin.com/in/tykelewis" target="_blank" class="icon"><i class="fa fa-linkedin-square"></i></a>
-                <a href="https://github.com/tyke" target="_blank" class="icon"><i class="fa fa-github"></i></a>
-            </div>
-        </div>
+
+<div class="band hero"><div class="wrap">
+  <div>
+    <div class="ident">
+      <div class="nm serif">Tyke Lewis</div>
+      <div class="ttl">Fractional technical builder and leader</div>
     </div>
+    <h1 class="serif">I help founders build products, and the <em>teams</em> that build them.</h1>
+    <p class="sub">Almost twenty years of engineering leadership, most recently as VP of Engineering at Vanna Health. Builder first. Taking on one or two new clients this quarter.</p>
+    <p class="heromail serif"><a class="js-mail" href="#">tykelewis at gmail dot com</a></p>
+  </div>
+  <img class="photo" src="./images/tyke.jpg" alt="Tyke Lewis" width="700" height="700">
+</div></div>
+
+<div class="band logoband"><div class="wrap">
+  <div class="mk">
+    <img class="lg-vanna" src="./images/vanna-logo.png" alt="" aria-hidden="true">
+    <span><span class="nm serif">Vanna Health</span><span class="rl">VP of Engineering</span></span>
+  </div>
+  <div class="mk">
+    <img class="lg-slack" src="./images/slack-logo.png" alt="" aria-hidden="true">
+    <span><span class="nm serif">Slack</span><span class="rl">Director of Engineering</span></span>
+  </div>
+  <div class="mk">
+    <img class="lg-nw" src="./images/nerdwallet-logo.png" alt="" aria-hidden="true">
+    <span><span class="nm serif">NerdWallet</span><span class="rl">Early eng leader</span></span>
+  </div>
+  <div class="mk">
+    <span class="zy"><img src="./images/zynga-logo.png" alt="" aria-hidden="true"></span>
+    <span><span class="nm serif">Zynga</span><span class="rl">Software Engineer</span></span>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <h2 class="serif">Still building.</h2>
+  <div class="about">
+    <div>
+      <p>Fractional CTO, VP of Engineering, builder. Often all three in the same engagement.</p>
+      <p>I've built products and engineering teams at every stage, from early-stage startups to serving as a Director of Engineering at Slack, where I led a Core Messaging organization along with Frontend and Desktop Infrastructure, and at NerdWallet, where I built the membership experience.</p>
+      <p>Most recently, as VP of Engineering at Vanna Health, I joined as the company's first engineering leader, built out its engineering organization and technical foundation, and transformed a struggling team into a high-performing one.</p>
+    </div>
+    <div>
+      <p>I love brainstorming product ideas, building apps, and turning ideas into something real. I've built teams I'm really proud of. They moved fast, held high standards, and loved what they did. I also genuinely enjoy hiring. Coaching engineers and leaders outside my own teams has been a constant alongside the day job for years.</p>
+      <p>I spend a lot of time with modern AI tools, and I have strong opinions about how they're changing what a small team can accomplish.</p>
+    </div>
+  </div>
+</div></section>
+
+<div class="band"><section><div class="wrap">
+  <h2 class="serif">Ways I can help</h2>
+
+  <div class="groupname serif">In your corner</div>
+  <p class="groupnote">For a founder, CTO, or head of engineering who wants an experienced person to think with.</p>
+  <div class="grid">
+    <div class="item">
+      <h3 class="serif">Hiring</h3>
+      <p>Sourcing, evaluating, and closing engineers. It's where I'm strongest, and it's the thing most teams are worst at.
+      <span class="good">Good if your next three hires will define the company.</span></p>
+    </div>
+    <div class="item">
+      <h3 class="serif">Sounding board</h3>
+      <p>A standing conversation about the hard calls: what to build, who to hire, when to rewrite.
+      <span class="good">Good if you're the most senior technical person and have no one to think out loud with.</span></p>
+    </div>
+    <div class="item">
+      <h3 class="serif">Org design &amp; management coaching</h3>
+      <p>Team structure, leveling, and growing first-time managers into good ones. Something I've done as a coach and mentor well beyond my own orgs.
+      <span class="good">Good if the team grew faster than the structure around it.</span></p>
+    </div>
+    <div class="item">
+      <h3 class="serif">Engineering health check</h3>
+      <p>A short, honest read on what's actually slowing your team down, and what to do about it.
+      <span class="good">Good if things feel slow and you can't tell why.</span></p>
+    </div>
+  </div>
+
+  <div class="groupname serif">Hands on</div>
+  <p class="groupnote">For when you don't need another advisor. You need someone to build.</p>
+  <div class="grid">
+    <div class="item">
+      <h3 class="serif">Own an initiative</h3>
+      <p>Take a major product or technical project end to end, alongside your engineers.
+      <span class="good">Good if something important keeps slipping.</span></p>
+    </div>
+    <div class="item">
+      <h3 class="serif">Build something new</h3>
+      <p>Zero to one apps and features, shipped.
+      <span class="good">Good if you need it to exist before you can hire for it.</span></p>
+    </div>
+    <div class="item">
+      <h3 class="serif">Raise the ceiling with AI tooling</h3>
+      <p>Get your team genuinely fast with modern AI development tools.
+      <span class="good">Good if you suspect you should be moving faster than you are.</span></p>
+    </div>
+  </div>
+
+  <p class="closer">Open to other shapes too, including interim engineering leadership.</p>
+</div></section></div>
+
+<section><div class="wrap">
+  <h2 class="serif">Selected work</h2>
+
+  <div class="work">
+    <div class="workhead">
+      <img class="lg-slack" src="./images/slack-logo.png" alt="" aria-hidden="true">
+      <div><div class="co serif">Slack</div><div class="role">Director of Engineering</div></div>
+    </div>
+    <p>Led Core Messaging, plus Frontend and Desktop Infrastructure. Built some of the company's most widely used features and changed how frontend engineers thought about code quality and velocity.</p>
+  </div>
+
+  <div class="work">
+    <div class="workhead">
+      <img class="lg-tc" src="./images/twochairs-logo.png" alt="" aria-hidden="true">
+      <div><div class="co serif">Two Chairs</div><div class="role">Technical advisor</div></div>
+    </div>
+    <p>Came in while the team was between engineering leaders. Coached the engineers, partnered with product, and helped shape architecture decisions through a stretch of consequential technical calls.</p>
+  </div>
+
+  <div class="work">
+    <div class="workhead">
+      <img class="lg-vanna" src="./images/vanna-logo.png" alt="" aria-hidden="true">
+      <div><div class="co serif">Vanna Health</div><div class="role">VP of Engineering</div></div>
+    </div>
+    <p>Oversaw engineering and data. Built the organization and technical foundation from scratch, and reshaped a struggling team into one of the most productive I've worked with.</p>
+  </div>
+
+  <div class="work">
+    <div class="workhead">
+      <img class="lg-nw" src="./images/nerdwallet-logo.png" alt="" aria-hidden="true">
+      <div><div class="co serif">NerdWallet</div><div class="role">Engineering leader</div></div>
+    </div>
+    <p>One of the early engineering leaders. Built the membership experience.</p>
+  </div>
+
+  <div class="work">
+    <div class="workhead">
+      <span class="zy"><img src="./images/zynga-logo.png" alt="" aria-hidden="true"></span>
+      <div><div class="co serif">Zynga</div><div class="role">Software Engineer</div></div>
+    </div>
+    <p>Built Zynga Poker. Where I cut my teeth on scale, performance, and moving faster than I thought a team could.</p>
+  </div>
+
+  <p class="closer">Invited by <a href="https://www.btv.vc/">BTV</a> to be an Engineering Mentor for their Accelerator Program, working with a cohort of companies across a wide range of technical challenges, and a long-standing mentor on MentorCruise, Intro, and Plato.</p>
+</div></section>
+
+<div class="band"><section class="contact"><div class="wrap">
+  <h2 class="serif">Let's find the right shape.</h2>
+  <p class="lead">Every engagement looks a little different, and you don't need to know exactly what you're after. If any of this sounds useful, send me a note and we'll work out the shape together.</p>
+  <p class="bigmail serif"><a class="js-mail" href="#">tykelewis at gmail dot com</a></p>
+  <p class="links"><a href="https://linkedin.com/in/tykelewis">LinkedIn</a></p>
+</div></section></div>
+
+<script>
+  /* Assemble the address at runtime so it is not sitting in the page source
+     for scrapers. Without JS the anchors still read as a usable address. */
+  (function () {
+    var parts = ['tykelewis', 'gmail', 'com'];
+    var address = parts[0] + String.fromCharCode(64) + parts[1] + '.' + parts[2];
+    var links = document.querySelectorAll('.js-mail');
+    for (var i = 0; i < links.length; i++) {
+      links[i].href = 'mailto:' + address;
+      links[i].textContent = address;
+    }
+  })();
+</script>
+
 </body>
 </html>

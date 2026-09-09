@@ -7,7 +7,9 @@
 :root{
   --ink:#221f1c;
   --muted:#5b564f;
-  --faint:#918b82;
+  /* Dark enough to clear WCAG AA (4.5:1) against both paper and white at the
+     11-12.5px sizes it is used for: role labels and the contact links. */
+  --faint:#726d66;
   --paper:#f6f1e9;
   --white:#fffdfa;
   --rule:#e3dbcd;
