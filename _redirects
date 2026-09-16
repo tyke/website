@@ -1,5 +1,15 @@
 # Netlify redirects.
 #
+# Keep every public hostname on the canonical non-www domain. The custom
+# domain rule backs up Netlify's primary-domain setting; the netlify.app rule
+# prevents the production deploy URL from becoming an indexable duplicate.
+https://www.tykelewis.com/*                       https://tykelewis.com/:splat    301!
+https://bucolic-platypus-aa74b1.netlify.app/*     https://tykelewis.com/:splat    301!
+
+# Keep the homepage available at one path. Netlify currently serves
+# /index.html as a separate 200 response unless we redirect it explicitly.
+/index.html    /    301!
+
 # /work.html was the consulting page before it was promoted to the site root.
 # A real 301 passes ranking signals properly; the work.html stub left in the
 # repo is only a fallback in case this file ever stops being picked up.
